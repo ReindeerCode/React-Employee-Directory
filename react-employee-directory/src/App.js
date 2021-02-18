@@ -71,6 +71,7 @@ export default class App extends Component {
         </button>
         <br></br>
         <br></br>
+        <h4>Sort by Title, First Last by clicking header.</h4>
         <table className="table" >
           <thead style={{color: "white"}}> 
               {this.state.keys.map((key, index) =>{

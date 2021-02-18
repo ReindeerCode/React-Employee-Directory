@@ -5,6 +5,8 @@ import "./App.css";
 export default class App extends Component {
   state = {
     people: [],
+    total: [],
+    keys: ["Title", "First", "Last", "Country", "Email"],
     search: "",
   };
 
@@ -13,11 +15,22 @@ export default class App extends Component {
     data
       .then((response) => response.json())
       .then((response) => {
-        this.setState({ people: response.results });
+        this.setState({ people: response.results, total: response.resus });
         console.log(response);
       });
   }
 
+  handleFilterClick = (term) =>{
+    let search_Term = term.toLowerCase()
+    let names = ["first", "title", "last"]
+    if(names.includes(search_Term)){
+    this.setState({
+      sorted: true,
+      people: this.state.people.sort((a,b) => a["name"][search_Term].localeCompare(b["name"][search_Term])),
+      ...this.state
+    })
+  }
+  }
   componentWillUnmount() {
     console.log("About to unmount");
   }
@@ -58,17 +71,26 @@ export default class App extends Component {
         </button>
         <br></br>
         <br></br>
-        <table style={{ marginLeft: "32%" }}>
-          {this.state.people.map((person) => (
-            <tr key={person.email}>
-              <td>{person.name.title}</td>
-              <td>{person.name.first}</td>
-              <td>{person.name.last}</td>
-              <td>{person.location.country}</td>
-              <td>{person.email}</td>
-            </tr>
-          ))}
+        <div style={{margin: "5% 4.5%", backgroundColor: this.state.sorted? "blue":"green"}}>
+        <table className="table">
+            <thead> 
+              {this.state.keys.map((key, index) =>{
+                return <th key={index} onClick={() => this.handleFilterClick(key)}>{key}</th>
+              })}
+            </thead>
+            <tbody>
+            {this.state.people.map((person) => (
+              <tr key={person.email}>
+                <td>{person.name.title}</td>
+                <td>{person.name.first}</td>
+                <td>{person.name.last}</td>
+                <td>{person.location.country}</td>
+                <td>{person.email}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
+      </div>
       </>
     );
   }

@@ -8,7 +8,10 @@
   font-family: "Josefin Sans", cursive;
 }
 
-table {
+.table {
+  margin-left: "32%";
   width: auto;
   text-align: center;
+  background-color: lightblue;
+  border: 3px solid #ddd;
 }

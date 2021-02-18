@@ -3,7 +3,12 @@
 /* .body {
   background-image: url(../public/assets/placeholder.jpg) no-repeat;
 } */
-.App {
+* {
   text-align: center;
   font-family: "Josefin Sans", cursive;
+}
+
+table {
+  width: auto;
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./App.css";
 
 export default class App extends Component {
@@ -13,6 +14,7 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         this.setState({ people: response.results });
+        console.log(response);
       });
   }
 
@@ -34,36 +36,40 @@ export default class App extends Component {
       });
   };
   handleResetClick = () => {
-    const data = fetch("https://randomuser.me/api/?results=10");
-    data
-      .then((response) => response.json())
-      .then((response) => {
-        this.setState({ people: response.results });
-      });
+    window.location.reload(true);
   };
 
   render() {
     return (
-      <div className="body">
-        <div className="App">
-          <h1>Employee Directory</h1>
-          <input
-            type="text"
-            value={this.state.search}
-            onChange={this.handleInputChange}
-          />
-          <button type="button" onClick={this.handleSearchClick}>
-            Search Male or Female
-          </button>
-          <br></br>
-          <button type="button" onClick={this.handleResetClick}>
-            Reset
-          </button>
+      <>
+        <h1>Employee Directory</h1>
+        <input
+          type="text"
+          value={this.state.search}
+          onChange={this.handleInputChange}
+        />
+        <button type="button" onClick={this.handleSearchClick}>
+          Search Male or Female
+        </button>
+        <br></br>
+        <br></br>
+        <button type="button" onClick={this.handleResetClick}>
+          Refresh Page
+        </button>
+        <br></br>
+        <br></br>
+        <table style={{ marginLeft: "32%" }}>
           {this.state.people.map((person) => (
-            <h1 key={person.email}>{person.email}</h1>
+            <tr key={person.email}>
+              <td>{person.name.title}</td>
+              <td>{person.name.first}</td>
+              <td>{person.name.last}</td>
+              <td>{person.location.country}</td>
+              <td>{person.email}</td>
+            </tr>
           ))}
-        </div>
-      </div>
+        </table>
+      </>
     );
   }
 }

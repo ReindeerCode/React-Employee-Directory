@@ -54,7 +54,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <>
+      <div class= "content">
         <h1>Employee Directory</h1>
         <input
           type="text"
@@ -71,9 +71,8 @@ export default class App extends Component {
         </button>
         <br></br>
         <br></br>
-        <div style={{margin: "5% 4.5%", backgroundColor: this.state.sorted? "blue":"green"}}>
-        <table className="table">
-            <thead> 
+        <table className="table" >
+          <thead style={{color: "white"}}> 
               {this.state.keys.map((key, index) =>{
                 return <th key={index} onClick={() => this.handleFilterClick(key)}>{key}</th>
               })}
@@ -89,9 +88,9 @@ export default class App extends Component {
               </tr>
             ))}
           </tbody>
-        </table>
+        
+      </table>
       </div>
-      </>
     );
   }
 }

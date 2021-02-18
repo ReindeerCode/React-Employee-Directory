@@ -3,15 +3,26 @@
 /* .body {
   background-image: url(../public/assets/placeholder.jpg) no-repeat;
 } */
-* {
-  text-align: center;
+.content {
   font-family: "Josefin Sans", cursive;
+  text-align: center;
 }
 
 .table {
-  margin-left: "32%";
-  width: auto;
+  justify-content: center;
   text-align: center;
   background-color: lightblue;
   border: 3px solid #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+}
+thead {
+  background-color: darkblue;
+}
+
+td,
+th {
+  padding: 2%;
+  border: 1px solid white;
 }

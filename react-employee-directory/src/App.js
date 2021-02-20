@@ -15,21 +15,54 @@ export default class App extends Component {
     data
       .then((response) => response.json())
       .then((response) => {
-        this.setState({ people: response.results, total: response.resus });
+        this.setState({ people: response.results, total: response.results }); 
         console.log(response);
       });
   }
 
   handleFilterClick = (term) =>{
     let search_Term = term.toLowerCase()
-    let names = ["first", "title", "last"]
-    if(names.includes(search_Term)){
-    this.setState({
-      sorted: true,
-      people: this.state.people.sort((a,b) => a["name"][search_Term].localeCompare(b["name"][search_Term])),
-      ...this.state
-    })
-  }
+
+    switch(search_Term) {
+      case "first":
+        this.setState({
+          sorted: true,
+          people: this.state.people.sort((a,b) => a.name.first.localeCompare(b.name.first)),
+          ...this.state
+        });
+        break;
+      case "last":
+        this.setState({
+          sorted: true,
+          people: this.state.people.sort((a,b) => a.name.last.localeCompare(b.name.last)),
+          ...this.state
+        });
+        break;
+        case "title":
+        this.setState({
+          sorted: true,
+          people: this.state.people.sort((a,b) => a.name.title.localeCompare(b.name.title)),
+          ...this.state
+        });
+        break;
+        case "country":
+        this.setState({
+          sorted: true,
+          people: this.state.people.sort((a,b) => a.location.country.localeCompare(b.location.country)),
+          ...this.state
+        });
+        break;
+        case "email":
+        this.setState({
+          sorted: true,
+          people: this.state.people.sort((a,b) => a.email.localeCompare(b.email)),
+          ...this.state
+        });
+        break;
+      default:
+        
+    }
+
   }
   componentWillUnmount() {
     console.log("About to unmount");
@@ -40,6 +73,8 @@ export default class App extends Component {
   };
 
   handleSearchClick = () => {
+
+    // use filter here instead of 2nd api call
     const search = this.state.search;
     const data = fetch(`https://randomuser.me/api/?gender=${search}`);
     data
@@ -48,21 +83,23 @@ export default class App extends Component {
         this.setState({ people: response.results });
       });
   };
+
+  
   handleResetClick = () => {
     window.location.reload(true);
   };
 
   render() {
     return (
-      <div class= "content">
-        <h1>Employee Directory</h1>
+      <div className= "content">
+        <h1 style={{color: "white"}}>Employee Directory</h1>
         <input
           type="text"
           value={this.state.search}
           onChange={this.handleInputChange}
         />
         <button type="button" onClick={this.handleSearchClick}>
-          Search Male or Female
+          Filter Male or Female
         </button>
         <br></br>
         <br></br>
@@ -70,8 +107,7 @@ export default class App extends Component {
           Refresh Page
         </button>
         <br></br>
-        <br></br>
-        <h4>Sort by Title, First Last by clicking header.</h4>
+                <h3 style={{color: "white"}}>Sort by clicking any table header.</h3>
         <table className="table" >
           <thead style={{color: "white"}}> 
               {this.state.keys.map((key, index) =>{

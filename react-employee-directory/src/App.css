@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
-/* .body {
-  background-image: url(../public/assets/placeholder.jpg) no-repeat;
-} */
+body {
+  background: url(./assets/placeholder.jpg) no-repeat;
+}
 .content {
   font-family: "Josefin Sans", cursive;
   text-align: center;

@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Project: React: Employee Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  Deployed Site Link - > 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents: 
+- [Project: React: Employee Directory](#project-react-employee-directory)
+  - [Table of Contents:](#table-of-contents)
+  - [License:](#license)
+  - [Description:](#description)
+  - [Installation Instructions:](#installation-instructions)
+  - [Test Command:](#test-command)
+  - [Github:](#github)
+  - [My Email Address:](#my-email-address)
+  - [Other Contributors:](#other-contributors)
+  - [Images:](#images)
 
-### `npm start`
+## License:
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description:
+Create an employee directory with React. This will require you to break up your application's UI into components, manage component state, and respond to user events.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+User Story -
+* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-### `npm test`
+Business Context -
+* An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation Instructions: 
+1) npm i on App.js
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Test Command: 
+To test filter type male or female into input box and click button - be sure to refresh page with refresh button after done with the filtered information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To sort simply click any header text to sort the entire table by that column alphabetically.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Github: 
+Check out more projects on my Github at https://github.com/ReindeerCode
 
-### `npm run eject`
+## My Email Address:
+If you have any questions please feel free to email me at ReindeerCode@gmail.com
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Other Contributors:
+Collaborated with https://github.com/arensalmela
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Images:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Following screen shot is of the home screen
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Project Screenshot](./src/assets/home.png)
 
-## Learn More
+Following screen shot is showing filter by male
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Project Screenshot](./src/assets/male.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Following screen shot is showing sort by first name
 
-### Code Splitting
+![Project Screenshot](./src/assets/sort.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

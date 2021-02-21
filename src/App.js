@@ -81,12 +81,7 @@ export default class App extends Component {
     console.log(filteredGenders)
     this.setState({ people: filteredGenders });
     
-    // const data = fetch(`https://randomuser.me/api/?gender=${search}`);
-    // data
-    //   .then((response) => response.json())
-    //   .then((response) => {
-    //     this.setState({ people: response.results });
-    //   });
+
   };
 
   

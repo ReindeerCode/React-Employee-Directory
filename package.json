@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ReindeerCode.github.io/React-Employee-Directory",
+  "homepage": "https://reindeercode.github.io/React-Employee-Directory/",
   "name": "react-employee-directory",
   "version": "0.1.0",
   "private": true,
@@ -15,12 +15,12 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

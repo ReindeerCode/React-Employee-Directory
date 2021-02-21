@@ -1,6 +1,6 @@
 # Project: React: Employee Directory
 
-  Deployed Site Link - > 
+  Deployed Site Link - > https://new-react-employee-directory.herokuapp.com/
 
 
 ## Table of Contents: 

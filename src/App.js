@@ -16,7 +16,7 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         this.setState({ people: response.results, total: response.results }); 
-        console.log(response);
+        
       });
   }
 
@@ -73,15 +73,20 @@ export default class App extends Component {
   };
 
   handleSearchClick = () => {
-
-    // use filter here instead of 2nd api call
-    const search = this.state.search;
-    const data = fetch(`https://randomuser.me/api/?gender=${search}`);
-    data
-      .then((response) => response.json())
-      .then((response) => {
-        this.setState({ people: response.results });
-      });
+    const genders = this.state.people
+    console.log(genders)
+    let genderEntered = this.state.search
+    console.log(genderEntered)
+    const filteredGenders = genders.filter(item => item.gender === genderEntered);
+    console.log(filteredGenders)
+    this.setState({ people: filteredGenders });
+    
+    // const data = fetch(`https://randomuser.me/api/?gender=${search}`);
+    // data
+    //   .then((response) => response.json())
+    //   .then((response) => {
+    //     this.setState({ people: response.results });
+    //   });
   };
 
   
@@ -96,10 +101,11 @@ export default class App extends Component {
         <input
           type="text"
           value={this.state.search}
+          placeholder={"Type male or female here"}
           onChange={this.handleInputChange}
         />
         <button type="button" onClick={this.handleSearchClick}>
-          Filter Male or Female
+          Filter by male or female
         </button>
         <br></br>
         <br></br>

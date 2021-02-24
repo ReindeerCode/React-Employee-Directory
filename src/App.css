@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 body {
-  background: url(./assets/placeholder.jpg) no-repeat;
+  background: url(./assets/placeholder.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .content {
   font-family: "Josefin Sans", cursive;
@@ -15,14 +19,24 @@ body {
 .table {
   justify-content: center;
   text-align: center;
-  background-color: lightblue;
-  border: 3px solid #ddd;
+  background-color: rgb(209, 219, 223);
+  border: 3px solid rgb(27, 9, 9);
   margin-left: auto;
   margin-right: auto;
-  width: 8em;
+  width: 9em;
 }
 thead {
   background-color: darkblue;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9em;
+  padding: 2%;
+}
+thead:focus {
+  color: yellow;
+}
+thead:visited {
+  color: green;
 }
 
 td,

@@ -55,6 +55,10 @@ Following screen shot is showing filter by male
 
 ![Project Screenshot](./src/assets/male.png)
 
+Following screen shot is showing filter by male
+
+![Project Screenshot](./src/assets/female.png)
+
 Following screen shot is showing sort by first name
 
 ![Project Screenshot](./src/assets/sort.png)

@@ -9,7 +9,7 @@
   - [License:](#license)
   - [Description:](#description)
   - [Installation Instructions:](#installation-instructions)
-  - [Test Command:](#test-command)
+  - [Usage Instructions:](#usage-instructions)
   - [Github:](#github)
   - [My Email Address:](#my-email-address)
   - [Other Contributors:](#other-contributors)
@@ -37,7 +37,7 @@ User Story -
 2) npm start in the terminal to launch application
 
 
-## Test Command: 
+## Usage Instructions: 
 To filter click one of the buttons: Green filters by Males, Purple filters by Females, and Blue resets to the full list.
 
 To sort click any header text to sort the entire table by that column alphabetically.

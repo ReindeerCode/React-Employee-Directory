@@ -19,22 +19,28 @@
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
-Create an employee directory with React. This will require you to break up your application's UI into components, manage component state, and respond to user events.
+
+Problem Statement - 
+
+* An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+  
+* Create an employee directory with React. This will require you to break up your application's UI into components, manage component state, and respond to user events.
+
 
 User Story -
 * As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-Business Context -
-* An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+
 
 ## Installation Instructions: 
-1) npm i on App.js
+1) npm i in the terminal to install all dependencies
+2) npm start in the terminal to launch application
 
 
 ## Test Command: 
-To test filter type male or female into input box and click button - be sure to refresh page with refresh button after done with the filtered information.
+To filter click one of the buttons: Green filters by Males, Purple filters by Females, and Blue resets to the full list.
 
-To sort simply click any header text to sort the entire table by that column alphabetically.
+To sort click any header text to sort the entire table by that column alphabetically.
 
 ## Github: 
 Check out more projects on my Github at https://github.com/ReindeerCode
